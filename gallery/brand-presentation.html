@@ -46,7 +46,7 @@
           <source srcset="../logos/UgottaGroup_Logo_White.png" media="(prefers-color-scheme: light)">
           <img class="logo-img" src="../logos/UgottaGroup_Logo_Black.png" alt="Ugotta Group Logo">
         </picture>
-        <img id="ugottaGif" class="logo-img" src="../animations/UgottaGroup_Animation_Black.gif" alt="Ugotta Group Animated Logo (silent)" style="margin-top:1rem"/>
+        <video id="ugottaVid" class="logo-img" src="../animations/UgottaGroup_Animation_Black.mp4" autoplay muted loop playsinline style="margin-top:1rem"></video>
         <div class="gif-controls" role="group" aria-label="Animation theme">
           <button class="btn" id="gifDark" aria-pressed="true">Dark GIF</button>
           <button class="btn" id="gifLight" aria-pressed="false">Light GIF</button>
@@ -77,9 +77,10 @@
   </section>
 </div>
 <script>
-const gif=document.getElementById('ugottaGif');const darkBtn=document.getElementById('gifDark');const lightBtn=document.getElementById('gifLight');
+const vid=document.getElementById('ugottaVid');const darkBtn=document.getElementById('gifDark');const lightBtn=document.getElementById('gifLight');
 function setPressed(d){darkBtn.setAttribute('aria-pressed', d?'true':'false');lightBtn.setAttribute('aria-pressed', d?'false':'true')}
-darkBtn.addEventListener('click',()=>{gif.src="../animations/UgottaGroup_Animation_Black.gif";setPressed(true)});
-lightBtn.addEventListener('click',()=>{gif.src="../animations/UgottaGroup_Animation_White.gif";setPressed(false)});
+darkBtn.addEventListener('click',()=>{vid.src="../animations/UgottaGroup_Animation_Black.mp4";setPressed(true)});
+lightBtn.addEventListener('click',()=>{vid.src="../animations/UgottaGroup_Animation_White.mp4";setPressed(false)});
 </script>
 </body></html>
+
